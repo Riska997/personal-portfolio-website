@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM:Projects</title>
+
+    <link rel="stylesheet" href="projects.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <!--logo-->
+        <div class="logo" onclick="window.location.href='index.html'">
+            <h1>Prisca Mulishi</h1>
+        </div>
+
+        <!--Dark/light switch-->
+        <div class="toggle">
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <!-- Project Section  -->
+    <section id="projects">
+        <h2>My <span>Projects</span></h2>
+        <label for="project-filter">Choose the Language:</label>
+        <select id="project-filter" onchange="filterProjects(this.value)">
+            <option value="all">All</option>
+            <option value="java">Java Projects</option>
+            <option value="web">Web Development Projects</option>
+            <!--<option value="cpp">C++ Projects</option>-->
+        </select>
+
+        <!-- Java Projects -->
+        <section id="projects">
+            <div class="project-container">
+                <div class="project-card java">
+                    <h3>To-Do List App</h3>
+                    <p>A simple desktop productivity application developed in Java that allows users to add, mark as
+                        done, remove, and clear tasks within a graphical interface. It demonstrates dynamic task
+                        management using Java Swing components.</p>
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>Java Swing</span>
+                    </div>
+                    <a href="https://github.com/Riska997/Listjava.git" target="_blank">Github</a>
+                </div>
+
+                <div class="project-card java">
+                    <h3>Student Management Platform</h3>
+                    <p>Java-based desktop application designed to manage academic records. It connects to a MySQL
+                        database, creates a student records table if it doesn’t exist, inserts predefined student data,
+                        and launches a graphical user interface (GUI) for managing the records.</p>
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>MySQL</span>
+                        <span>JDBC</span>
+                        <span>Java Swing</span>
+                    </div>
+                    <a href="https://github.com/Riska997/StudentManagementPlatform.git" target="_blank">Github</a>
+                </div>
+
+                <div class="project-card java">
+                    <h3>Chat Application</h3>
+                    <p>A real-time chat web application that enables users to register, log in, and engage in live
+                        messaging with other authenticated users. It utilizes Java WebSocket API (JSR 356) for real-time
+                        communication, Java Servlets for user authentication and routing, and JavaScript for client-side
+                        WebSocket handling and UI updates.</p>
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>HTML, CSS, JavaScript</span>
+                        <span>Java WebSocket API (JSR 356)</span>
+                        <span>Java Servlets</span>
+                        <span>JavaScript with WebSocket API</span>
+                        <span>Glassfish Server</span>
+                    </div>
+                    <a href="https://prisca-dev-admin@bitbucket.org/prisca-dev/java-chat-app.git"
+                        target="_blank">Bitbucket</a>
+                </div>
+
+                <div class="project-card java">
+                    <h3>Inventory Management System</h3>
+                    <p>This is a basic desktop-based inventory management application that allows users to add, update,
+                        delete, and view items in stock. The application provides a graphical interface where users can
+                        input item details such as ID, name, quantity, and price, and manage them through a table.</p>
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>Java Swing</span>
+                        <span>Java Collections</span>
+                    </div>
+                    <a href="https://github.com/Riska997/InventoryManagementSystem.git">Github</a>
+                </div>
+
+                <div class="project-card java">
+                    <h3>Console-Based Enhanced Calculator</h3>
+                    <p>Provides a user-friendly command-line interface for performing a variety of calculations. It
+                        supports arithmetic operations, scientific functions, and unit conversions (e.g., temperature,
+                        currency, length, time, area, volume, etc.).</p>
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>Java Math class</span>
+                    </div>
+                    <a href="https://github.com/Riska997/ConsoleCalculator.git">Github</a>
+                </div>
+
+                <div class="project-card java">
+                    <h3>Research Management Platform</h3>
+                    <p>A Java-based desktop application for managing research project registrations, allowing users to
+                        enter and store researcher details into a MySQL database via a graphical user interface (GUI).
+                    </p>
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>MySQL</span>
+                        <span>Java Swing</span>
+                        <span>JDBC</span>
+                    </div>
+                    <a href="https://github.com/Riska997/ResearchManagementPlatform.git" target="_blank">GitHub</a>
+                </div>
+
+                <div class="project-card java">
+                    <h3>Student Data Swing</h3>
+                    <p>This is a basic desktop application for managing student information using a graphical user
+                        interface (GUI). It allows users to input and display student details such as name, surname,
+                        campus, age, and specialization.</p>
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>Java Swing</span>
+                        <span>File I/O</span>
+                    </div>
+                    <a href="https://github.com/Riska997/StudentDataSwing.git" target="_blank">Github</a>
+                </div>
+
+                <div class="project-card java">
+                    <h3>Simple Contact Management System</h3>
+                    <p>A Java-based console application designed to manage a user's contact information. It allows the
+                        user to add, view, update, delete, and search contacts through a menu-driven interface.</p>
+                    <div class="tags">
+                        <span>Java</span>
+                    </div>
+                    <a href="https://github.com/Riska997/SimpleContactManagementSystem.git">Github</a>
+                </div>
+
+                <!-- Web Development Projects -->
+                <div class="project-card web">
+                    <h3>Hair Salon E-Commerce Website</h3>
+                    <p>This project is a database-driven e-commerce website for a hair salon, allowing clients to view
+                        services, book appointments, and purchase hair products online. It integrates user-friendly
+                        navigation, dynamic content, and a responsive design tailored to both customers and
+                        administrators.</p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                    <a href="https://github.com/Riska997/E-Commerce_HairSalon.git" target="_blank">Github</a>
+                </div>
+            </div>
+        </section>
+
+        </main>
+        <script src="script.js"></script>
+</body>
+
+</html>

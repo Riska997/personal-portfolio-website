@@ -1,0 +1,195 @@
+
+/************************RESUME************************************************************/
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  h1, h2, h3 {
+    color: #2c3e50;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    border-bottom: 2px solid #04AA6D;
+    padding-bottom: 5px;
+  }
+
+  p, li {
+    font-size: 1em;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  .contact-info {
+    margin-bottom: 20px;
+    font-size: 1em;
+  }
+
+  .contact-info a {
+    color: #04AA6D;
+    text-decoration: none;
+  }
+
+  .section {
+    margin-bottom: 30px;
+  }
+
+  .job-title {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  .company {
+    font-style: italic;
+    font-size: 1em;
+  }
+
+  .date {
+    float: right;
+    color: #888;
+    font-size: 0.9em;
+  }
+
+  .skills-list, .certifications-list {
+    list-style-type: disc;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+    .container {
+      padding: 20px;
+    }
+  }
+
+  /******************************FOOTER***************************************************************/
+footer {
+    background-color: var(--second-bg-color); 
+    color: #ffffff; 
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+  }
+  
+  .footer-nav {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    margin-bottom: 20px;
+    text-decoration: none; 
+  }
+  
+  .navbar_link {
+    margin: 0 15px; 
+    
+  }
+  
+  .navbar_link a {
+    color:  #ffffff; 
+    font-size: 1.5em; 
+    transition: color 0.3s; 
+    text-decoration: none;
+  }
+  
+  .navbar_link a:hover {
+    color: var(--main-color); 
+  }
+  
+  .social-icons {
+    margin-bottom: 20px; 
+  }
+  
+  .social-icons a {
+    color:  #ffffff; 
+    font-size: 1.5em; 
+    margin: 0 10px; 
+    transition: color 0.3s; 
+  }
+  
+  .social-icons a:hover {
+    color: var(--main-color); 
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #ccc; 
+    padding-top: 10px; 
+  }
+  
+  .footer-bottom p {
+    margin: 0; 
+    font-size: 0.9em; 
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar_link a {
+        font-size: 1.2em; 
+    }
+  
+    .social-icons a {
+        font-size: 1.2em; 
+    }
+  }
+  
+  /************************BACK TO TOP************************************************************/
+  .scroll-to-top {
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    display: none; 
+    background-color: var(--main-color); 
+    border: none; 
+    border-radius: 30%; 
+    padding: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+    cursor: pointer; 
+    z-index: 1000; 
+    transition: background-color 0.3s; 
+  }
+  
+  .scroll-to-top button {
+    background: none; 
+    border: none; 
+    color: white; 
+    font-size: 1.5em; 
+  }
+  
+  .scroll-to-top:hover {
+    background-color:var(--second-bg-color); 
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 20px; 
+        right: 20px; 
+    }
+  }
