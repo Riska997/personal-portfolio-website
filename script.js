@@ -1,4 +1,3 @@
-
 /*
 =============================================
 PRISCA MULISHI - PERSONAL PORTFOLIO
@@ -17,131 +16,112 @@ const rootElement = document.documentElement;
 
 // Apply a theme to the website.
 function applyTheme(theme) {
-    rootElement.setAttribute("data-theme", theme);
+  rootElement.setAttribute("data-theme", theme);
 
-    if (themeToggle) {
-        themeToggle.checked = theme === "light";
-    }
+  if (themeToggle) {
+    themeToggle.checked = theme === "light";
+  }
 }
 
 // Retrieve the visitor's saved theme.
 function loadTheme() {
-    let savedTheme = "dark";
+  let savedTheme = "dark";
 
-    try {
-        savedTheme = localStorage.getItem("theme") || "dark";
-    } catch (error) {
-        // Use the default theme if storage is unavailable.
-    }
+  try {
+    savedTheme = localStorage.getItem("theme") || "dark";
+  } catch (error) {
+    // Use the default theme if storage is unavailable.
+  }
 
-    applyTheme(savedTheme === "light" ? "light" : "dark");
+  applyTheme(savedTheme === "light" ? "light" : "dark");
 }
 
 // Save the selected theme.
 function switchTheme() {
-    if (!themeToggle) {
-        return;
-    }
+  if (!themeToggle) {
+    return;
+  }
 
-    const selectedTheme = themeToggle.checked
-        ? "light"
-        : "dark";
+  const selectedTheme = themeToggle.checked ? "light" : "dark";
 
-    applyTheme(selectedTheme);
+  applyTheme(selectedTheme);
 
-    try {
-        localStorage.setItem("theme", selectedTheme);
-    } catch (error) {
-        // Theme still changes if storage is unavailable.
-    }
+  try {
+    localStorage.setItem("theme", selectedTheme);
+  } catch (error) {
+    // Theme still changes if storage is unavailable.
+  }
 }
 
 // Initialise theme.
 loadTheme();
 
 if (themeToggle) {
-    themeToggle.addEventListener("change", switchTheme);
+  themeToggle.addEventListener("change", switchTheme);
 }
 
+/* ==========================================
+   2. MOBILE NAVIGATION MENU
+========================================== */
 
 /* ==========================================
    2. MOBILE NAVIGATION MENU
 ========================================== */
 
 const menuList = document.getElementById("menuList");
-const menuButton = document.querySelector(".menu-icon");
-
-// Close the mobile menu.
-function closeMenu() {
-    if (!menuList || !menuButton) {
-        return;
-    }
-
-    menuList.style.maxHeight = "0px";
-
-    menuButton.setAttribute("aria-expanded", "false");
-}
-
-// Open or close the mobile menu.
-// This function is also called by the HTML button.
-function toggleMenu() {
-    if (!menuList || !menuButton) {
-        return;
-    }
-
-    const isExpanded =
-        menuButton.getAttribute("aria-expanded") === "true";
-
-    if (isExpanded) {
-        closeMenu();
-    } else {
-        menuList.style.maxHeight =
-            menuList.scrollHeight + "px";
-
-        menuButton.setAttribute("aria-expanded", "true");
-    }
-}
-
-// Make the function available to the HTML onclick.
-window.toggleMenu = toggleMenu;
+const menuButton = document.getElementById("menu-toggle");
 
 if (menuList && menuButton) {
+  // Close the mobile navigation menu.
+  function closeMenu() {
+    menuList.classList.remove("is-open");
 
-    // Start with the mobile menu closed.
-    closeMenu();
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open navigation menu");
+  }
 
-    // Close menu after selecting a navigation link.
-    const menuLinks = menuList.querySelectorAll("a");
+  // Open or close the menu when clicked.
+  menuButton.addEventListener("click", function () {
+    const isOpen = menuList.classList.toggle("is-open");
 
-    menuLinks.forEach(function (link) {
-        link.addEventListener("click", closeMenu);
-    });
+    menuButton.setAttribute("aria-expanded", String(isOpen));
 
-    // Close menu when clicking outside it.
-    document.addEventListener("click", function (event) {
-        const clickedMenu = menuList.contains(event.target);
-        const clickedButton = menuButton.contains(event.target);
+    menuButton.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu",
+    );
+  });
 
-        if (!clickedMenu && !clickedButton) {
-            closeMenu();
-        }
-    });
+  // Close the menu when a navigation link is clicked.
+  menuList.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", closeMenu);
+  });
 
-    // Close menu when pressing Escape.
-    document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-            closeMenu();
-        }
-    });
+  // Close the menu when clicking outside.
+  document.addEventListener("click", function (event) {
+    if (
+      !menuList.contains(event.target) &&
+      !menuButton.contains(event.target)
+    ) {
+      closeMenu();
+    }
+  });
 
-    // Reset mobile menu when switching to desktop view.
-    window.addEventListener("resize", function () {
-        if (window.innerWidth > 860) {
-            closeMenu();
-        }
-    });
+  // Close the menu when Escape is pressed.
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeMenu();
+      menuButton.focus();
+    }
+  });
+
+  // Reset the menu when returning to desktop width.
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 860) {
+      closeMenu();
+    }
+  });
 }
-
 
 /* ==========================================
    3. PROJECT FILTERING
@@ -149,20 +129,18 @@ if (menuList && menuButton) {
 
 // Used by the project filter on projects.html.
 function filterProjects(category) {
-    const projects = document.querySelectorAll(".project-card");
+  const projects = document.querySelectorAll(".project-card");
 
-    projects.forEach(function (project) {
-        const showProject =
-            category === "all" ||
-            project.classList.contains(category);
+  projects.forEach(function (project) {
+    const showProject =
+      category === "all" || project.classList.contains(category);
 
-        project.style.display = showProject ? "" : "none";
-    });
+    project.style.display = showProject ? "" : "none";
+  });
 }
 
 // Make the function available to the HTML onchange.
 window.filterProjects = filterProjects;
-
 
 /* ==========================================
    4. BACK TO TOP BUTTON
@@ -171,48 +149,38 @@ window.filterProjects = filterProjects;
 const backToTopContainer = document.getElementById("myBtn");
 
 if (backToTopContainer) {
+  const backToTopButton = backToTopContainer.querySelector("button");
 
-    const backToTopButton =
-        backToTopContainer.querySelector("button");
-
-    // Show button after scrolling down.
-    function updateBackToTop() {
-        if (window.scrollY > 250) {
-            backToTopContainer.style.display = "block";
-        } else {
-            backToTopContainer.style.display = "none";
-        }
+  // Show button after scrolling down.
+  function updateBackToTop() {
+    if (window.scrollY > 250) {
+      backToTopContainer.style.display = "block";
+    } else {
+      backToTopContainer.style.display = "none";
     }
+  }
 
-    // Return to the beginning of the page.
-    function scrollToTop() {
-        const reduceMotion = window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches;
+  // Return to the beginning of the page.
+  function scrollToTop() {
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
 
-        window.scrollTo({
-            top: 0,
-            behavior: reduceMotion ? "auto" : "smooth"
-        });
-    }
+    window.scrollTo({
+      top: 0,
+      behavior: reduceMotion ? "auto" : "smooth",
+    });
+  }
 
-    window.addEventListener(
-        "scroll",
-        updateBackToTop,
-        { passive: true }
-    );
+  window.addEventListener("scroll", updateBackToTop, { passive: true });
 
-    if (backToTopButton) {
-        backToTopButton.addEventListener(
-            "click",
-            scrollToTop
-        );
-    }
+  if (backToTopButton) {
+    backToTopButton.addEventListener("click", scrollToTop);
+  }
 
-    // Set the correct visibility when the page loads.
-    updateBackToTop();
+  // Set the correct visibility when the page loads.
+  updateBackToTop();
 }
-
 
 /* ==========================================
    5. CONTACT FORM

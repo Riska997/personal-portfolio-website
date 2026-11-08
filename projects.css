@@ -647,3 +647,82 @@ header {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* ============================================
+   MOBILE LAYOUT CORRECTIONS
+   ============================================ */
+
+@media (max-width: 640px) {
+
+    /* Header layout */
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+
+        width: 100%;
+        min-width: 0;
+    }
+
+    .logo {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+
+        width: 100%;
+        min-width: 0;
+    }
+
+    .back-link {
+        min-width: 0;
+        white-space: normal;
+    }
+
+    /* Keep the content inside the viewport */
+    #projects {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        padding: 45px 16px 65px;
+    }
+
+    .projects-intro,
+    .filter-container,
+    .project-container,
+    .project-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    /* Single column on phones */
+    .project-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    /* Prevent long text from escaping its card */
+    .projects-intro p,
+    .project-card h3,
+    .project-card p {
+        overflow-wrap: anywhere;
+    }
+
+    /* Make the dropdown fit */
+    #project-filter {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+}
