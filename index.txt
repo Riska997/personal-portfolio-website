@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the software engineering and web development projects of Prisca Mulishi, a Software Engineering graduate based in South Africa.">
+    <title>Prisca Mulishi | Software Engineer & Web Developer</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <!-- Site navigation -->
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="logo">
+                <a href="#home" aria-label="Prisca Mulishi, back to home">
+                    <h1>Prisca Mulishi</h1>
+                </a>
+            </div>
+
+            <!-- Theme switch -->
+            <div class="toggle">
+                <label class="switch" aria-label="Switch between dark and light themes">
+                    <input type="checkbox" id="theme-toggle" aria-label="Use light theme">
+                    <span class="slider" aria-hidden="true"></span>
+                </label>
+            </div>
+
+            <!-- Main menu -->
+            <ul id="menuList">
+                <li><a href="#home"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                <li><a href="#about"><i class="fa fa-user" aria-hidden="true"></i> About</a></li>
+                <li><a href="#skills"><i class="fa fa-cogs" aria-hidden="true"></i> Skills</a></li>
+                <li><a href="#projects"><i class="fa fa-folder-open" aria-hidden="true"></i> Projects</a></li>
+                <li><a href="#contact"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a></li>
+            </ul>
+
+           
+            <!-- Mobile menu button -->
+            <button
+                type="button"
+                class="menu-icon"
+                id="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-controls="menuList"
+                aria-expanded="false"
+            >
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+
+        </nav>
+    </header>
+
+    <main>
+        <!-- HOME SECTION -->
+        <section id="home" aria-labelledby="home-title">
+            <div class="profile-container">
+                <div class="image-outer-wrapper">
+                    <div class="image-wrapper">
+                        <img src="images/pp.JPG"
+                             alt="Illustrated portrait of Prisca Mulishi"
+                             class="profile-image">
+                    </div>
+                </div>
+
+                <h1 id="home-title">Hello, I'm <span>Prisca Mulishi</span></h1>
+                <h3>Software Engineering Graduate &amp; Web Developer</h3>
+
+                <p>
+                    I build responsive websites and develop practical software projects.
+                    Explore my work or get in touch to discuss a project.
+                </p>
+
+                <div class="cv-links">
+                    <a href="#projects" class="cv-button">View My Projects</a>
+                    <a href="#contact" class="cv-button">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" aria-labelledby="about-title">
+            <h2 id="about-title">About <span>Me</span></h2>
+
+            <p>
+                I'm Prisca Mulishi, a Software Engineering graduate from Eduvos
+                in Cape Town, South Africa. I enjoy creating websites,
+                building software applications, and improving my programming
+                skills through hands-on projects.
+            </p>
+
+            <p>
+                My interests include web development, Java programming,
+                databases, and problem-solving. I'm open to web development
+                projects, collaboration opportunities, and entry-level
+                roles in technology.
+            </p>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" aria-labelledby="skills-title">
+            <h2 id="skills-title">Skills &amp; <span>Technologies</span></h2>
+
+            <div class="skill-category">
+                <h3>Web Development</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Bootstrap</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Programming &amp; Databases</h3>
+                <ul>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
+
+            
+<div class="skill-category">
+    <h3>Tools &amp; Applications</h3>
+    <ul>
+        <li>Git &amp; GitHub</li>
+        <li>Visual Studio Code</li>
+        <li>IntelliJ IDEA</li>
+        <li>Apache NetBeans</li>
+        <li>Android Studio</li>
+        <li>XAMPP</li>
+        <li>Microsoft Excel</li>
+        <li>Microsoft Word</li>
+        <li>Microsoft PowerPoint</li>
+    </ul>
+</div>
+
+        </section>
+
+        <!-- FEATURED PROJECTS SECTION -->
+        <section id="projects" aria-labelledby="projects-title">
+            <h2 id="projects-title">Featured <span>Projects</span></h2>
+
+            <p>A selection of websites and applications I've worked on.</p>
+
+            <div class="project-container">
+
+                <!-- Project 1 -->
+                <article class="project-card web">
+                    <h3>Hair Salon E-Commerce Website</h3>
+
+                    <p>
+                        A hair salon website project with service information,
+                        appointment booking, and hair-product shopping features.
+                    </p>
+
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+
+                    <a href="https://github.com/Riska997/E-Commerce_HairSalon"
+                       target="_blank" rel="noopener noreferrer">
+                        View Code on GitHub
+                    </a>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card web">
+                    <h3>Personal Portfolio Website</h3>
+
+                    <p>
+                        This portfolio website, created using HTML, CSS, and
+                        JavaScript to present my background, skills, and projects.
+                    </p>
+
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <a href="https://github.com/Riska997/personal-portfolio-website"
+                       target="_blank" rel="noopener noreferrer">
+                        View Code on GitHub
+                    </a>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card java">
+                    <h3>Student Management Platform</h3>
+
+                    <p>
+                        A Java desktop project that uses MySQL and a graphical
+                        interface to work with student records.
+                    </p>
+
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>MySQL</span>
+                        <span>JDBC</span>
+                        <span>Java Swing</span>
+                    </div>
+
+                    <a href="https://github.com/Riska997/StudentManagementPlatform"
+                       target="_blank" rel="noopener noreferrer">
+                        View Code on GitHub
+                    </a>
+                </article>
+
+            </div>
+
+            <a href="projects.html" class="see-more">See All Projects</a>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact <span>Me</span></h2>
+
+            <p>
+                Interested in a website, a collaboration, or a technology
+                opportunity? Send me a message using the form below.
+            </p>
+
+            <form id="contact-form"
+                  action="https://formspree.io/f/xwplyzno"
+                  method="POST">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           autocomplete="name"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           autocomplete="email"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message"
+                              name="message"
+                              rows="5"
+                              required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- BACK TO TOP BUTTON -->
+    <div id="myBtn" class="scroll-to-top">
+        <button type="button"
+                aria-label="Back to top"
+                title="Back to top">
+            <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="social-icons" aria-label="Contact and social profiles">
+
+                <a href="https://github.com/Riska997"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="GitHub profile">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/prisca-mulishi-3994702a2"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="LinkedIn profile">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+
+                <a href="mailto:priscamulishin@gmail.com"
+                   aria-label="Send me an email">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Prisca Mulishi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
