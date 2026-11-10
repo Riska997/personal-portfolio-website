@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Explore web development and Java software projects created by Prisca Mulishi.">
+
+    <title>My Projects | Prisca Mulishi</title>
+
+    <link rel="stylesheet" href="projects.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+
+            <div class="logo">
+                <h1>
+                    <a href="index.html#home">
+                        Prisca Mulishi
+                    </a>
+                </h1>
+            </div>
+
+            <div class="header-actions">
+
+                <a href="index.html#projects" class="back-link">
+                    <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                    Back to Portfolio
+                </a>
+
+                <!-- Dark / Light Theme -->
+                <div class="toggle">
+                    <label class="switch">
+                        <input
+                            type="checkbox"
+                            id="theme-toggle"
+                            aria-label="Use light theme">
+
+                        <span class="slider" aria-hidden="true"></span>
+                    </label>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+
+            <div class="projects-intro">
+
+                <h2>My <span>Projects</span></h2>
+
+                <p>
+                    Explore a selection of my web development
+                    and software engineering projects.
+                    These projects reflect the technologies
+                    I have worked with and the practical
+                    skills I continue to develop.
+                </p>
+
+            </div>
+
+
+            <!-- PROJECT FILTER -->
+            <div class="filter-container">
+
+                <label for="project-filter">
+                    Filter Projects
+                </label>
+
+                <select
+                    id="project-filter"
+                    onchange="filterProjects(this.value)">
+
+                    <option value="all">
+                        All Projects
+                    </option>
+
+                    <option value="web">
+                        Web Development
+                    </option>
+
+                    <option value="java">
+                        Java Applications
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- PROJECT CARDS -->
+            <div class="project-container">
+
+
+                <!-- =========================
+                     WEB DEVELOPMENT PROJECTS
+                ========================== -->
+
+
+                <!-- PROJECT 1 -->
+                <article class="project-card web">
+
+                    <h3>Hair Salon E-Commerce Website</h3>
+
+                    <p>
+                        A database-driven hair salon website
+                        project featuring service information,
+                        appointment booking and hair-product
+                        shopping functionality. The project
+                        uses PHP and MySQL alongside
+                        front-end web technologies.
+                    </p>
+
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+
+                    <a href="https://github.com/Riska997/E-Commerce_HairSalon"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        View on GitHub
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 2 -->
+                <article class="project-card web">
+
+                    <h3>Personal Portfolio Website</h3>
+
+                    <p>
+                        A responsive personal website
+                        developed to showcase my
+                        software engineering background,
+                        technical skills and projects.
+                        It includes a theme switcher,
+                        project pages and a contact form.
+                    </p>
+
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <a href="https://github.com/Riska997/personal-portfolio-website"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        View on GitHub
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     JAVA APPLICATIONS
+                ========================== -->
+
+
+                <!-- PROJECT 3 -->
+                <article class="project-card java">
+
+                    <h3>Student Management Platform</h3>
+
+                    <p>
+                        A Java desktop application
+                        for managing student records
+                        through a graphical interface.
+                        It connects to a MySQL database
+                        using JDBC.
+                    </p>
+
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>Java Swing</span>
+                        <span>MySQL</span>
+                        <span>JDBC</span>
+                    </div>
+
+                    <a href="https://github.com/Riska997/StudentManagementPlatform"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        View on GitHub
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 4 -->
+                <article class="project-card java">
+
+                    <h3>To-Do List Application</h3>
+
+                    <p>
+                        A Java desktop productivity
+                        application that allows users
+                        to add, complete, remove and
+                        clear tasks using a graphical
+                        interface built with Java Swing.
+                    </p>
+
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>Java Swing</span>
+                    </div>
+
+                    <a href="https://github.com/Riska997/Listjava"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        View on GitHub
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 5 -->
+                <article class="project-card java">
+
+                    <h3>Chat Application</h3>
+
+                    <p>
+                        A Java-based web chat project
+                        using WebSockets for real-time
+                        messaging and Java Servlets for
+                        application routing and
+                        authentication functionality.
+                    </p>
+
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>JavaScript</span>
+                        <span>WebSocket</span>
+                        <span>Java Servlets</span>
+                        <span>GlassFish</span>
+                    </div>
+
+                    
+                    <a href="https://github.com/Riska997/ChatApplication"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                            View on GitHub
+                    </a>
+
+
+                </article>
+
+
+                <!-- PROJECT 6 -->
+                <article class="project-card java">
+
+                    <h3>Inventory Management System</h3>
+
+                    <p>
+                        A desktop inventory management
+                        application for adding, editing,
+                        deleting and viewing stock records.
+                        The interface displays item details,
+                        quantities and prices.
+                    </p>
+
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>Java Swing</span>
+                        <span>Java Collections</span>
+                    </div>
+
+                    <a href="https://github.com/Riska997/InventoryManagementSystem"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        View on GitHub
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 7 -->
+                <article class="project-card java">
+
+                    <h3>Enhanced Console Calculator</h3>
+
+                    <p>
+                        A Java command-line calculator
+                        supporting arithmetic operations,
+                        scientific calculations and
+                        different types of unit
+                        conversions.
+                    </p>
+
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>Java Math</span>
+                    </div>
+
+                    <a href="https://github.com/Riska997/ConsoleCalculator"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        View on GitHub
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 8 -->
+                <article class="project-card java">
+
+                    <h3>Research Management Platform</h3>
+
+                    <p>
+                        A Java desktop application
+                        for entering and storing
+                        researcher details in a
+                        MySQL database through a
+                        graphical user interface.
+                    </p>
+
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>Java Swing</span>
+                        <span>MySQL</span>
+                        <span>JDBC</span>
+                    </div>
+
+                    <a href="https://github.com/Riska997/ResearchManagementPlatform"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        View on GitHub
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 9 -->
+                <article class="project-card java">
+
+                    <h3>Student Data Swing</h3>
+
+                    <p>
+                        A Java desktop application
+                        with a graphical interface
+                        for entering and displaying
+                        student information,
+                        including personal and
+                        academic details.
+                    </p>
+
+                    <div class="tags">
+                        <span>Java</span>
+                        <span>Java Swing</span>
+                        <span>File I/O</span>
+                    </div>
+
+                    <a href="https://github.com/Riska997/StudentDataSwing"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        View on GitHub
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 10 -->
+                <article class="project-card java">
+
+                    <h3>Contact Management System</h3>
+
+                    <p>
+                        A Java console application
+                        for managing contact
+                        information. It supports
+                        adding, viewing, updating,
+                        deleting and searching
+                        contact records.
+                    </p>
+
+                    <div class="tags">
+                        <span>Java</span>
+                    </div>
+
+                    <a href="https://github.com/Riska997/SimpleContactManagementSystem"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        View on GitHub
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <p>
+            &copy; 2026 Prisca Mulishi.
+            All rights reserved.
+        </p>
+
+        <a href="index.html#home">
+            Return to Homepage
+        </a>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
