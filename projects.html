@@ -2,22 +2,21 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Explore web development and Java software projects created by Prisca Mulishi.">
+    <meta name="description" content="Explore web development and Java software projects created by Prisca Mulishi.">
 
     <title>My Projects | Prisca Mulishi</title>
 
     <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="project-previews.css">
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -44,10 +43,7 @@
                 <!-- Dark / Light Theme -->
                 <div class="toggle">
                     <label class="switch">
-                        <input
-                            type="checkbox"
-                            id="theme-toggle"
-                            aria-label="Use light theme">
+                        <input type="checkbox" id="theme-toggle" aria-label="Use light theme">
 
                         <span class="slider" aria-hidden="true"></span>
                     </label>
@@ -85,9 +81,7 @@
                     Filter Projects
                 </label>
 
-                <select
-                    id="project-filter"
-                    onchange="filterProjects(this.value)">
+                <select id="project-filter" onchange="filterProjects(this.value)">
 
                     <option value="all">
                         All Projects
@@ -116,18 +110,33 @@
 
 
                 <!-- PROJECT 1 -->
-                <article class="project-card web">
 
-                    <h3>Hair Salon E-Commerce Website</h3>
+                <!-- SALON_DEMO_PREVIEW_V1 -->
+
+                <article class="project-card web web-version-card" tabindex="0"
+                    aria-label="Eve and Steve Salon project screenshot preview">
+
+                    <span class="project-version-label">
+                        Web Version
+                    </span>
+
+                    <h3>
+                        Hair Salon E-Commerce Website
+                    </h3>
 
                     <p>
-                        A database-driven hair salon website
-                        project featuring service information,
-                        appointment booking and hair-product
-                        shopping functionality. The project
-                        uses PHP and MySQL alongside
-                        front-end web technologies.
+                        A responsive, database-driven unisex salon website
+                        built with PHP and MySQL. Features include a salon
+                        service catalogue, customer registration, login,
+                        appointment requests, and booking-status tracking.
                     </p>
+
+                    <!-- Portfolio demonstration notice -->
+
+                    <p class="salon-demo-notice" role="note"><strong>Demo only:</strong> Please use fictional
+                        information. Never enter real personal details or passwords.</p>
+
+                    <!-- Technologies -->
 
                     <div class="tags">
                         <span>HTML</span>
@@ -138,49 +147,88 @@
                         <span>MySQL</span>
                     </div>
 
-                    <a href="https://github.com/Riska997/E-Commerce_HairSalon"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                        View on GitHub
-                    </a>
+                    <!-- Preserve original GitHub functionality
+
+    <a
+        href="https://github.com/Riska997/E-Commerce_HairSalon"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <i class="fab fa-github" aria-hidden="true"></i>
+             View on GitHub
+    </a>-->
+
+                    <!-- Screenshot preview -->
+
+                    <div class="web-hover-preview">
+
+                        <div class="web-preview-frame">
+
+                            <img src="images/salon-web-preview.png" alt="Screenshot of the Eve and Steve Salon website"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="web-preview-footer">
+
+                            <span class="web-preview-action">
+                                Live demo under security review
+                            </span>
+
+                            <a class="web-preview-action" href="https://github.com/Riska997/E-Commerce_HairSalon"
+                                target="_blank" rel="noopener noreferrer">
+                                View On GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
 
                 </article>
 
 
                 <!-- PROJECT 2 -->
-                <article class="project-card web">
-
+                <!-- PORTFOLIO_SELF_PREVIEW_V1 -->
+                <article class="project-card web web-version-card" tabindex="0"
+                    data-demo-url="https://riska997.github.io/personal-portfolio-website/"
+                    aria-label="Personal Portfolio Website live preview">
+                    <span class="project-version-label">Web Version</span>
                     <h3>Personal Portfolio Website</h3>
-
                     <p>
-                        A responsive personal website
-                        developed to showcase my
-                        software engineering background,
-                        technical skills and projects.
-                        It includes a theme switcher,
-                        project pages and a contact form.
+                        A responsive portfolio showcasing my software engineering background,
+                        technical skills and projects, with a dark/light theme switcher.
                     </p>
-
                     <div class="tags">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>JavaScript</span>
                     </div>
+                    <!--Original Github Link
+    <a href="https://github.com/Riska997/personal-portfolio-website"
+       target="_blank" rel="noopener noreferrer">View Code on GitHub</a>-->
 
-                    <a href="https://github.com/Riska997/personal-portfolio-website"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                        View on GitHub
-                    </a>
+                    <!-- Preview displays when card is hovered, or focused with the keyboard. -->
+                    <div class="web-hover-preview">
 
+                        <div class="web-preview-frame">
+                            <img src="images/portfolio-web-preview.png"
+                                alt="Screenshot of my personal portfolio homepage" loading="lazy">
+                        </div>
+                        <div class="web-preview-footer">
+                            <a class="web-preview-action is-live"
+                                href="https://riska997.github.io/personal-portfolio-website/" target="_blank"
+                                rel="noopener noreferrer">Click Here to Open Website</a>
+                            <a class="web-preview-action" href="https://github.com/Riska997/personal-portfolio-website"
+                                target="_blank" rel="noopener noreferrer">View On GitHub</a>
+                        </div>
+                    </div>
                 </article>
 
 
                 <!-- To-Do List Application: browser version -->
-                <article class="project-card web web-version-card" tabindex="0" data-demo-url="https://riska997.github.io/To-Do-List/"
-                         aria-label="To-Do List Application — web version preview">
+                <article class="project-card web web-version-card" tabindex="0"
+                    data-demo-url="https://riska997.github.io/To-Do-List/"
+                    aria-label="To-Do List Application — web version preview">
                     <span class="project-version-label">Web Version</span>
                     <h3>To-Do List Application — Web Version</h3>
                     <p>Build and organise tasks in a browser, with options to add, complete and remove tasks.</p>
@@ -193,18 +241,21 @@
                     <!-- Preview displays when card is hovered, or focused with the keyboard. -->
                     <div class="web-hover-preview">
                         <div class="web-preview-frame">
-                            <img src="images/todo-web-preview.png" alt="Screenshot of the To-Do List web application dashboard" loading="lazy">
+                            <img src="images/todo-web-preview.png"
+                                alt="Screenshot of the To-Do List web application dashboard" loading="lazy">
                         </div>
                         <div class="web-preview-footer">
-                            <strong>Website Screenshot</strong>
-                            <a class="web-preview-action is-live" href="https://riska997.github.io/To-Do-List/" target="_blank" rel="noopener noreferrer">Click Here to Open Website</a>
+
+                            <a class="web-preview-action is-live" href="https://riska997.github.io/To-Do-List/"
+                                target="_blank" rel="noopener noreferrer">Click Here to Open Website</a>
                         </div>
                     </div>
                 </article>
 
                 <!-- Inventory Management System: browser version -->
-                <article class="project-card web web-version-card" tabindex="0" data-demo-url="https://riska997.github.io/Inventory-Management-System/"
-                         aria-label="Inventory Management System — web version preview">
+                <article class="project-card web web-version-card" tabindex="0"
+                    data-demo-url="https://riska997.github.io/Inventory-Management-System/"
+                    aria-label="Inventory Management System — web version preview">
                     <span class="project-version-label">Web Version</span>
                     <h3>Inventory Management System — Web Version</h3>
                     <p>A browser-based inventory interface for adding, editing, viewing and deleting stock records.</p>
@@ -217,18 +268,22 @@
                     <!-- Preview displays when card is hovered, or focused with the keyboard. -->
                     <div class="web-hover-preview">
                         <div class="web-preview-frame">
-                            <img src="images/inventory-web-preview.png" alt="Screenshot of the Inventory Management System website" loading="lazy">
+                            <img src="images/inventory-web-preview.png"
+                                alt="Screenshot of the Inventory Management System website" loading="lazy">
                         </div>
                         <div class="web-preview-footer">
-                            <strong>Website Screenshot</strong>
-                            <a class="web-preview-action is-live" href="https://riska997.github.io/Inventory-Management-System/" target="_blank" rel="noopener noreferrer">Click Here to Open Website</a>
+
+                            <a class="web-preview-action is-live"
+                                href="https://riska997.github.io/Inventory-Management-System/" target="_blank"
+                                rel="noopener noreferrer">Click Here to Open Website</a>
                         </div>
                     </div>
                 </article>
 
                 <!-- Student Management Platform: browser version -->
-                <article class="project-card web web-version-card" tabindex="0" data-demo-url="https://riska997.github.io/student-management-/"
-                         aria-label="Student Management Platform — web version preview">
+                <article class="project-card web web-version-card" tabindex="0"
+                    data-demo-url="https://riska997.github.io/student-management-/"
+                    aria-label="Student Management Platform — web version preview">
                     <span class="project-version-label">Web Version</span>
                     <h3>Student Management Platform — Web Version</h3>
                     <p>A web interface for entering, viewing and managing student records.</p>
@@ -241,11 +296,13 @@
                     <!-- Preview displays when card is hovered, or focused with the keyboard. -->
                     <div class="web-hover-preview">
                         <div class="web-preview-frame">
-                            <img src="images/student-web-preview.png" alt="Screenshot of the Campus Ledger student management website" loading="lazy">
+                            <img src="images/student-web-preview.png"
+                                alt="Screenshot of the Campus Ledger student management website" loading="lazy">
                         </div>
                         <div class="web-preview-footer">
-                            <strong>Website Screenshot</strong>
-                            <a class="web-preview-action is-live" href="https://riska997.github.io/student-management-/" target="_blank" rel="noopener noreferrer">Click Here to Open Website</a>
+
+                            <a class="web-preview-action is-live" href="https://riska997.github.io/student-management-/"
+                                target="_blank" rel="noopener noreferrer">Click Here to Open Website</a>
                         </div>
                     </div>
                 </article>
@@ -277,9 +334,8 @@
                         <span>JDBC</span>
                     </div>
 
-                    <a href="https://github.com/Riska997/StudentManagementPlatform"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                    <a href="https://github.com/Riska997/StudentManagementPlatform" target="_blank"
+                        rel="noopener noreferrer">
                         <i class="fab fa-github" aria-hidden="true"></i>
                         View on GitHub
                     </a>
@@ -306,9 +362,7 @@
                         <span>Java Swing</span>
                     </div>
 
-                    <a href="https://github.com/Riska997/Listjava"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                    <a href="https://github.com/Riska997/Listjava" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-github" aria-hidden="true"></i>
                         View on GitHub
                     </a>
@@ -337,12 +391,10 @@
                         <span>GlassFish</span>
                     </div>
 
-                    
-                    <a href="https://github.com/Riska997/ChatApplication"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                            <i class="fab fa-github" aria-hidden="true"></i>
-                            View on GitHub
+
+                    <a href="https://github.com/Riska997/ChatApplication" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        View on GitHub
                     </a>
 
 
@@ -369,9 +421,8 @@
                         <span>Java Collections</span>
                     </div>
 
-                    <a href="https://github.com/Riska997/InventoryManagementSystem"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                    <a href="https://github.com/Riska997/InventoryManagementSystem" target="_blank"
+                        rel="noopener noreferrer">
                         <i class="fab fa-github" aria-hidden="true"></i>
                         View on GitHub
                     </a>
@@ -397,9 +448,7 @@
                         <span>Java Math</span>
                     </div>
 
-                    <a href="https://github.com/Riska997/ConsoleCalculator"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                    <a href="https://github.com/Riska997/ConsoleCalculator" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-github" aria-hidden="true"></i>
                         View on GitHub
                     </a>
@@ -427,9 +476,8 @@
                         <span>JDBC</span>
                     </div>
 
-                    <a href="https://github.com/Riska997/ResearchManagementPlatform"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                    <a href="https://github.com/Riska997/ResearchManagementPlatform" target="_blank"
+                        rel="noopener noreferrer">
                         <i class="fab fa-github" aria-hidden="true"></i>
                         View on GitHub
                     </a>
@@ -457,9 +505,7 @@
                         <span>File I/O</span>
                     </div>
 
-                    <a href="https://github.com/Riska997/StudentDataSwing"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                    <a href="https://github.com/Riska997/StudentDataSwing" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-github" aria-hidden="true"></i>
                         View on GitHub
                     </a>
@@ -485,9 +531,8 @@
                         <span>Java</span>
                     </div>
 
-                    <a href="https://github.com/Riska997/SimpleContactManagementSystem"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                    <a href="https://github.com/Riska997/SimpleContactManagementSystem" target="_blank"
+                        rel="noopener noreferrer">
                         <i class="fab fa-github" aria-hidden="true"></i>
                         View on GitHub
                     </a>
@@ -521,4 +566,5 @@
     <script src="project-previews.js"></script>
 
 </body>
+
 </html>
